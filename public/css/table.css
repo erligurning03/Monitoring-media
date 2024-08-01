@@ -1,0 +1,30 @@
+/* styles.css */
+table {
+    width: 100%;
+    border-collapse: collapse; /* Menghapus jarak antara border sel */
+}
+
+table, th, td {
+    border: 1px solid black; /* Mengatur border tabel, header, dan sel */
+}
+
+th, td {
+    padding: 10px; /* Menambahkan padding di dalam sel */
+    text-align: left; /* Mengatur text align ke kiri */
+}
+
+thead {
+    background-color: #f2f2f2; /* Mengatur warna latar belakang header */
+}
+
+tfoot {
+    background-color: #f9f9f9; /* Mengatur warna latar belakang footer */
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2; /* Warna latar belakang baris genap */
+}
+
+tr:hover {
+    background-color: #ddd; /* Warna latar belakang saat hover */
+}
