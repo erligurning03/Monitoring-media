@@ -32,3 +32,9 @@ Route::get('/media-sosial', function () {
 Route::get('/manajemen-user', function () {
     return view('admin.manajemen-user');
 });
+
+
+Route::get('/handle', function () {
+    return view('admin.handle-user');
+});
+

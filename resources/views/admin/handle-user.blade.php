@@ -5,6 +5,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
         .card {
             background-color: white;
@@ -30,10 +31,11 @@
             background-color: #f2ebeb;
         }
 
+        /* Common styles for buttons */
         button {
             color: white;
             border: none;
-            padding: 10px 20px;
+            padding: 10px 10px;
             text-align: center;
             text-decoration: none;
             display: inline-block;
@@ -43,22 +45,34 @@
             border-radius: 4px;
         }
 
-        .blue-button {
-            background-color: #007BFF;
+        /* Styles for edit button */
+        .edit-button {
+            background-color: #FFC107;
         }
 
-        .blue-button:hover {
-            background-color: #0056b3;
+        .edit-button:hover {
+            background-color: #e0a800;
         }
 
-        .green-button {
-            background-color: #28a745;
+        /* Styles for delete button */
+        .delete-button {
+            background-color: #DC3545;
         }
 
-        .green-button:hover {
-            background-color: #28a745;
+        .delete-button:hover {
+            background-color: #c82333;
         }
 
+        /* Styles for save button */
+        .save-button {
+            background-color: #007BFF; /* Blue background */
+        }
+
+        .save-button:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+        }
+
+        /* Modal styles */
         .modal {
             display: none;
             position: fixed;
@@ -98,10 +112,7 @@
         }
 
         .modal-content input[type=text],
-        .modal-content input[type=email],
-        .modal-content input[type=password],
-        .modal-content select,
-        .modal-content input[type=file] {
+        .modal-content select {
             width: 100%;
             padding: 12px 20px;
             margin: 8px 0;
@@ -110,18 +121,9 @@
             border-radius: 4px;
             box-sizing: border-box;
         }
-
-        .save-button {
-            background-color: #326CFF;
-        }
-
-        .save-button:hover {
-            background-color: #1474AE;
-        }
     </style>
 </head>
 <body>
-    <button class="blue-button" onclick="openAddUserModal()">Tambah Pengguna</button>
     <div class="card">
         <table>
             <tr>
@@ -135,7 +137,8 @@
                 <td>Fani Windari</td>
                 <td>Operator</td>
                 <td>
-                    <button class="green-button">Handle</button>
+                    <button class="edit-button" onclick="openModal('Fani Windari', 'Operator')"><i class="fas fa-edit"></i></button>
+                    <button class="delete-button" onclick="alert('Are you sure you want to delete Fani Windari?')"><i class="fas fa-trash-alt"></i></button>
                 </td>
             </tr>
             <tr>
@@ -143,56 +146,54 @@
                 <td>Erli Gurning</td>
                 <td>Operator</td>
                 <td>
-                    <button class="green-button">Handle</button>
+                    <button class="edit-button" onclick="openModal('Erli Gurning', 'Operator')"><i class="fas fa-edit"></i></button>
+                    <button class="delete-button" onclick="alert('Are you sure you want to delete Erli Gurning')"><i class="fas fa-trash-alt"></i></button>
                 </td>
             </tr>
         </table>
     </div>
 
-    <!-- The Add User Modal -->
-    <div id="addUserModal" class="modal">
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
         <div class="modal-content">
-            <span class="close" onclick="closeAddUserModal()">&times;</span>
-            <form id="addUserForm">
-                <label for="name">Name:</label><br>
-                <input type="text" id="name" name="name" required><br>
-                <label for="email">Email:</label><br>
-                <input type="email" id="email" name="email" required><br>
-                <label for="nidn">NIDN:</label><br>
-                <input type="text" id="nidn" name="nidn" required><br>
+            <span class="close" onclick="closeModal()">&times;</span>
+            <form id="editForm">
+                <label for="username">Username:</label><br>
+                <input type="text" id="username" name="username"><br>
                 <label for="role">Role:</label><br>
-                <select id="role" name="role" required>
+                <select id="role" name="role">
                     <option value="admin">Admin</option>
                     <option value="operator">Operator</option>
                 </select><br><br>
-                <label for="photo">Photo:</label><br>
-                <input type="file" id="photo" name="photo" accept="image/*"><br>
-                <label for="password">Password:</label><br>
-                <input type="password" id="password" name="password" required><br><br>
                 <button type="submit" class="save-button">Save</button>
             </form>
         </div>
     </div>
 
     <script>
-        function openAddUserModal() {
-            document.getElementById('addUserModal').style.display = "block";
+        function openModal(username, role) {
+            document.getElementById('username').value = username;
+            document.getElementById('role').value = role;
+            document.getElementById('myModal').style.display = "block";
         }
 
-        function closeAddUserModal() {
-            document.getElementById('addUserModal').style.display = "none";
+        function closeModal() {
+            document.getElementById('myModal').style.display = "none";
         }
 
+        // Close the modal when the user clicks anywhere outside of the modal
         window.onclick = function(event) {
-            if (event.target == document.getElementById('addUserModal')) {
-                closeAddUserModal();
+            if (event.target == document.getElementById('myModal')) {
+                closeModal();
             }
         }
 
-        document.getElementById('addUserForm').onsubmit = function(event) {
+        // Handle form submission
+        document.getElementById('editForm').onsubmit = function(event) {
             event.preventDefault();
-            alert('Data berhasil diinput untuk: ' + document.getElementById('name').value);
-            closeAddUserModal();
+            // Perform your save logic here
+            alert('Form submitted for: ' + document.getElementById('username').value + ' with role: ' + document.getElementById('role').value);
+            closeModal();
         }
     </script>
 </body>
