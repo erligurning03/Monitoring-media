@@ -48,7 +48,7 @@
                 @include('layouts.navbar')
 
                 <!-- Begin Page Content -->
-                <div class="container-fluid">
+                <div class="container-fluid" style="margin-top:2.5cm;">
                     @yield('content')
                 </div>
                 

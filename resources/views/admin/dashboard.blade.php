@@ -3,7 +3,7 @@
 @section('content')
 
 {{-- statistik monitoringn media online --}}
-<h1 class="h3 mb-2 text-gray-800" style="text-align: center"><strong>statistik monitoring media</strong></h1>
+<h1 class="h3 mb-2 fw-bold" style="text-align: center; color:black"><strong>statistik monitoring media</strong></h1>
 
 <div class="container">
     <div class="row">

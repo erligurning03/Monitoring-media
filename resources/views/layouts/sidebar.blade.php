@@ -1,14 +1,14 @@
         <!-- Sidebar -->
-        <ul class="navbar-nav sidebar sidebar-dark accordion" id="accordionSidebar" style="background-image: linear-gradient(to bottom, #1474AE, #326CFF);">
+        <ul class="navbar-nav sidebar sidebar-dark accordion" id="accordionSidebar" style="background-image: linear-gradient(to bottom, #1474AE, #326CFF); ">
         {{-- <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar"> --}}
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" style="margin: 10px 11px" href="/dashboard">
                 {{-- <div class="sidebar-brand-icon rotate-n-15"> --}}
                     {{-- <i class="fas fa-laugh-wink"></i> --}}
                     <img src="{{asset('img/logo-diskominfo-sumut.jpg')}}" alt="" style="align:center; width: 65px; border-radius: 50%; margin-top: 5px;margin-buttom: 5px;">
                 {{-- </div> --}}
-                <div class="sidebar-brand-text mx-3">Monitoring Opini Publik</div>
+                <div class="sidebar-brand-text mx-3 " style="text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);">MONITORING OPINI PUBLIK</div>
             </a>
 
             <!-- Divider -->
