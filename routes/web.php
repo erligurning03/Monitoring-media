@@ -17,12 +17,18 @@ Route::get('/dashboard', function () {
     return view('admin.dashboard');
 });
 
+Route::get('/media-online', function () {
+    return view('admin.media-online');
+});
+Route::get('/tambah-media-online', function () {
+    return view('admin.tambah-media-online');
+});
+
 Route::get('/media-cetak', function () {
     return view('admin.media-cetak');
 });
-
-Route::get('/media-online', function () {
-    return view('admin.media-online');
+Route::get('/tambah-media-cetak', function () {
+    return view('admin.tambah-media-cetak');
 });
 
 Route::get('/media-sosial', function () {
