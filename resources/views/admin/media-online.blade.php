@@ -54,7 +54,10 @@
                                 <td>Rilis</td>
                                 <td>agus fatoni adalah pj gubernur sekarang, dia akan bertanggun jawab untuk sumatera utara sampai dilantiknya guberbur baru</td>
                                 <td>-</td>
-                                <td>aksi</td>
+                                <td>
+                                    <button class="edit-button" onclick="openModal('Fani Windari', 'Operator')"><i class="fas fa-edit"></i></button>
+                                    <button class="delete-button" onclick="alert('Are you sure you want to delete Fani Windari?')"><i class="fas fa-trash-alt"></i></button>
+                                </td>
                             </tr>
                             <tr>
                                 <td>foto</td>
@@ -66,7 +69,10 @@
                                 <td>Rilis</td>
                                 <td>agus fatoni adalah pj gubernur sekarang, dia akan bertanggun jawab untuk sumatera utara sampai dilantiknya guberbur baru</td>
                                 <td>-</td>
-                                <td>aksi</td>
+                                <td>
+                                    <button class="edit-button" onclick="openModal('Fani Windari', 'Operator')"><i class="fas fa-edit"></i></button>
+                                    <button class="delete-button" onclick="alert('Are you sure you want to delete Fani Windari?')"><i class="fas fa-trash-alt"></i></button>
+                                </td>
                             </tr>
                             <tr>
                                 <td>foto</td>
@@ -78,7 +84,10 @@
                                 <td>Rilis</td>
                                 <td>agus fatoni adalah pj gubernur sekarang, dia akan bertanggun jawab untuk sumatera utara sampai dilantiknya guberbur baru</td>
                                 <td>-</td>
-                                <td>aksi</td>
+                                <td>
+                                    <button class="edit-button" onclick="openModal('Fani Windari', 'Operator')"><i class="fas fa-edit"></i></button>
+                                    <button class="delete-button" onclick="alert('Are you sure you want to delete Fani Windari?')"><i class="fas fa-trash-alt"></i></button>
+                                </td>
                             </tr>                        
                         </tbody>
                     </table>

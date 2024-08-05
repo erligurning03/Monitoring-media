@@ -1,30 +1,114 @@
-/* styles.css */
+.card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px;
+}
+
 table {
+    font-family: Arial, sans-serif;
+    border-collapse: collapse;
     width: 100%;
-    border-collapse: collapse; /* Menghapus jarak antara border sel */
 }
 
-table, th, td {
-    border: 1px solid black; /* Mengatur border tabel, header, dan sel */
-}
-
-th, td {
-    padding: 10px; /* Menambahkan padding di dalam sel */
-    text-align: left; /* Mengatur text align ke kiri */
-}
-
-thead {
-    background-color: #f2f2f2; /* Mengatur warna latar belakang header */
-}
-
-tfoot {
-    background-color: #f9f9f9; /* Mengatur warna latar belakang footer */
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
 }
 
 tr:nth-child(even) {
-    background-color: #f2f2f2; /* Warna latar belakang baris genap */
+    background-color: #f2ebeb;
 }
 
-tr:hover {
-    background-color: #ddd; /* Warna latar belakang saat hover */
+/* Common styles for buttons */
+button {
+    color: white;
+    border: none;
+    padding: 10px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+/* Styles for edit button */
+.edit-button {
+    background-color: #FFC107;
+}
+
+.edit-button:hover {
+    background-color: #e0a800;
+}
+
+/* Styles for delete button */
+.delete-button {
+    background-color: #DC3545;
+}
+
+.delete-button:hover {
+    background-color: #c82333;
+}
+
+/* Styles for save button */
+.save-button {
+    background-color: #007BFF; /* Blue background */
+}
+
+.save-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+    max-width: 800px;
+    border-radius: 8px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-content input[type=text],
+.modal-content select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
 }

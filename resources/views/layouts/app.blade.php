@@ -20,11 +20,18 @@
     <!-- Custom styles for this template -->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
 
+    <link rel="stylesheet" href="{{ asset('css/table.css') }}">
+
+    {{-- // untuk styling css dihalaman handle user --}}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
     <!-- Custom styles for this page -->
     <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
 
     {{-- library memanggil chart --}}
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
+
+
         
     </script>
 
@@ -117,6 +124,7 @@
 
     <!-- chart erli untuk statistik dashboard -->
     <script src="js/chart-admin.js"></script>
+
 
 </body>
 
