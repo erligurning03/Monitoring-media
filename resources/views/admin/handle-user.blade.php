@@ -1,5 +1,9 @@
 @extends('layouts.app')
 
+@section('css')
+<link rel="stylesheet" href="{{ asset('css/table.css') }}">
+@endsection
+
 @section('content')
 
     <div class="card">
@@ -48,33 +52,39 @@
         </div>
     </div>
 
-    <script>
-        function openModal(username, role) {
-            document.getElementById('username').value = username;
-            document.getElementById('role').value = role;
-            document.getElementById('myModal').style.display = "block";
-        }
-
-        function closeModal() {
-            document.getElementById('myModal').style.display = "none";
-        }
-
-        // Close the modal when the user clicks anywhere outside of the modal
-        window.onclick = function(event) {
-            if (event.target == document.getElementById('myModal')) {
-                closeModal();
-            }
-        }
-
-        // Handle form submission
-        document.getElementById('editForm').onsubmit = function(event) {
-            event.preventDefault();
-            // Perform your save logic here
-            alert('Form submitted for: ' + document.getElementById('username').value + ' with role: ' + document.getElementById('role').value);
-            closeModal();
-        }
-    </script>
-
 <!-- end of The Modal untuk handle user -->
 
 @endsection
+
+@section('js')
+
+<script>
+    function openModal(username, role) {
+        document.getElementById('username').value = username;
+        document.getElementById('role').value = role;
+        document.getElementById('myModal').style.display = "block";
+    }
+
+    function closeModal() {
+        document.getElementById('myModal').style.display = "none";
+    }
+
+    // Close the modal when the user clicks anywhere outside of the modal
+    window.onclick = function(event) {
+        if (event.target == document.getElementById('myModal')) {
+            closeModal();
+        }
+    }
+
+    // Handle form submission
+    document.getElementById('editForm').onsubmit = function(event) {
+        event.preventDefault();
+        // Perform your save logic here
+        alert('Form submitted for: ' + document.getElementById('username').value + ' with role: ' + document.getElementById('role').value);
+        closeModal();
+    }
+</script>
+
+@endsection
+
+

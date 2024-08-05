@@ -36,27 +36,10 @@
 </div>
 
 
-{{--start statistik monitoringn media online --}}
-{{-- <div class="card shadow mb-4" style="max-width: 100%; width: 32rem;">
-    <canvas id="diagramBatang" style="width:100%;mmax-width:100%;"></canvas>
-</div>
 
-<div class="card shadow mb-4" style="max-width: 100%; width: 32rem;">
-    <canvas id="diagramLingkaran" style="width:100%; max-width:100%;"></canvas>
-</div> --}}
-{{--end statistik monitoringn media online --}}
+@endsection
 
-{{-- statistik monitoringn media cetak --}}
-{{-- <div class="card shadow mb-4" style="max-width: 100%; width: 32rem;">
-    <canvas id="diagramBatangCetak" style="width:100%;mmax-width:100%;"></canvas>
-</div>
-
-<div class="card shadow mb-4" style="max-width: 100%; width: 32rem;">
-    <canvas id="diagramLingkarancetak" style="width:100%; max-width:100%;"></canvas>
-</div> --}}
-
-{{--end statistik monitoringn media cetak --}}
-
-
-
+@section('js')
+<!-- chart erli untuk statistik dashboard -->
+<script src="js/chart-admin.js"></script>
 @endsection

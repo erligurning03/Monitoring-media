@@ -1,5 +1,10 @@
 @extends('layouts.app')
 
+@section('css')
+<link rel="stylesheet" href="{{ asset('css/table.css') }}">
+@endsection
+
+
 @section('content')
 
 <div>
