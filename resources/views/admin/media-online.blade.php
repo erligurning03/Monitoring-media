@@ -3,6 +3,8 @@
 @section('css')
 <link rel="stylesheet" href="{{ asset('css/table.css') }}">
 @endsection
+
+
 @section('content')
 
 <div>
@@ -16,7 +18,7 @@
                 <!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc. -->
                 <path d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 144L48 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l144 0 0 144c0 17.7 14.3 32 32 32s32-14.3 32-32l0-144 144 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-144 0 0-144z" fill="#ffffff"/>
             </svg>
-            Tambah Media Online
+            Tambah Media Cetak
         </button>
         {{-- <button style="background-color: #007BFF;" onclick="" ><a href="/tambah-media-cetak"></a>Tambah</button> --}}
         <div class="card shadow mb-4">
@@ -31,12 +33,29 @@
                                 <th>Foto Cuplikan Berita</th>
                                 <th>Media Publikasi</th>
                                 <th>Waktu Pantau</th>
+                                <th>Halaman</th>
+                                <th>Kolom</th>
+                                <th>Baris</th>
                                 <th>Jenis Berita</th>
                                 <th>Ringkasan Berita</th>
                                 <th>Saran Tindak Lanjut</th>
                                 <th>Aksi</th>
                             </tr>
                         </thead>
+                        {{-- <tfoot>
+                            <tr>
+                                <th>Foto Cuplikan Berita</th>
+                                <th>Media Pantau</th>
+                                <th>Waktu Pantau</th>
+                                <th>Halaman</th>
+                                <th>Kolom</th>
+                                <th>Baris</th>
+                                <th>Jenis Berita</th>
+                                <th>Ringkasan Berita</th>
+                                <th>Saran Tindak Lanjut</th>
+                                <th>Aksi</th>
+                            </tr>
+                        </tfoot> --}}
                         <tbody>
                             <tr>
                                 <td>
@@ -44,6 +63,9 @@
                                 </td>
                                 <td>CNN</td>
                                 <td>7 agustus 2024</td>
+                                <td>34</td>
+                                <td>4</td>
+                                <td>5</td>
                                 <td>Rilis</td>
                                 <td>agus fatoni adalah pj gubernur sekarang, dia akan bertanggun jawab untuk sumatera utara sampai dilantiknya guberbur baru</td>
                                 <td>-</td>
@@ -58,6 +80,9 @@
                                 </td>
                                 <td>CNN</td>
                                 <td>7 agustus 2024</td>
+                                <td>34</td>
+                                <td>4</td>
+                                <td>5</td>
                                 <td>Rilis</td>
                                 <td>agus fatoni adalah pj gubernur sekarang, dia akan bertanggun jawab untuk sumatera utara sampai dilantiknya guberbur baru</td>
                                 <td>-</td>
@@ -72,6 +97,9 @@
                                 </td>
                                 <td>CNN</td>
                                 <td>7 agustus 2024</td>
+                                <td>34</td>
+                                <td>4</td>
+                                <td>5</td>
                                 <td>Rilis</td>
                                 <td>agus fatoni adalah pj gubernur sekarang, dia akan bertanggun jawab untuk sumatera utara sampai dilantiknya guberbur baru</td>
                                 <td>-</td>
