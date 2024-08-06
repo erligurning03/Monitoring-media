@@ -52,9 +52,10 @@
         <button type="submit" class="btn btn-primary">Submit</button>
     </form> --}}
 
-    <form>
+    <form action="/media-online" method="post">
+        @csrf
         <div class="form-group">
-            <label for="formFile" class="form-label">Foto Cuplikan Media Cetak</label>
+            <label for="formFile" class="form-label">Foto Cuplikan Media Online</label>
             <input class="form-control" type="file" id="formFile">
         </div> 
         <div class="form-group">
@@ -73,23 +74,7 @@
         <div class="form-group">
             <label for="exampleInputEmail1" class="form-label">Media Pantau</label>
             <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-        </div>
-        
-        <div class="form-row">
-            <div class="form-group col-md-4">
-                <label for="exampleInputEmail1" class="form-label">Halaman</label>
-                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-            </div>
-            <div class="form-group col-md-4">
-                <label for="exampleInputEmail1" class="form-label">Kolom</label>
-                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-            </div>
-            <div class="form-group col-md-4">
-                <label for="exampleInputEmail1" class="form-label">Baris</label>
-                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-            </div>
-        </div>
-        
+        </div>     
         <div class="form-group">
             <label for="ringkasan_berita" class="form-label">Ringkasan Berita</label> <br>
             <textarea id="ringkasan_berita" name="ringkasan_berita" rows="10" cols="50" class="form-control"></textarea>
