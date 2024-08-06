@@ -52,7 +52,8 @@
         <button type="submit" class="btn btn-primary">Submit</button>
     </form> --}}
 
-    <form>
+    <form action="/media-online" method="post">
+        @csrf
         <div class="form-group">
             <label for="formFile" class="form-label">Foto Cuplikan Media Online</label>
             <input class="form-control" type="file" id="formFile">

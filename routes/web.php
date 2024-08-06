@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\MediaOnlineController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -17,12 +19,16 @@ Route::get('/dashboard', function () {
     return view('admin.dashboard');
 });
 
-Route::get('/media-online', function () {
-    return view('admin.media-online');
-});
-Route::get('/tambah-media-online', function () {
-    return view('admin.tambah-media-online');
-});
+// Route::get('/media-online', function () {
+//     return view('admin.media-online');
+// });
+// Route::get('/tambah-media-online', function () {
+//     return view('admin.tambah-media-online');
+// });
+Route::get('/media-online',[MediaOnlineController::class, 'index']);
+Route::get('/tambah-media-online',[MediaOnlineController::class, 'store']);
+Route::post('/tambah-media-online',[MediaOnlineController::class, 'store']);
+
 
 Route::get('/media-cetak', function () {
     return view('admin.media-cetak');
