@@ -24,7 +24,9 @@
                 <td>Fani Windari</td>
                 <td>Operator</td>
                 <td>
-                    <button class="green-button">Handle</button>
+                    <a href="/handle" class="btn green-button" style= "color: white;">
+                        Handle
+                    </a>
                 </td>
             </tr>
             <tr>
@@ -32,7 +34,9 @@
                 <td>Erli Gurning</td>
                 <td>Operator</td>
                 <td>
-                    <button class="green-button">Handle</button>
+                    <a href="/handle" class="btn green-button" style= "color: white;">
+                        Handle
+                    </a>
                 </td>
             </tr>
         </table>
