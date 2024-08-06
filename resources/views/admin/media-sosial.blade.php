@@ -2,10 +2,10 @@
 
 @section('css')
 <link rel="stylesheet" href="{{ asset('css/table.css') }}">
+<!-- Link Font Awesome dari CDN -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 @endsection
-@section('css')
-<link rel="stylesheet" href="{{ asset('css/table.css') }}">
-@endsection
+
 @section('content')
 
     <!-- Page Heading -->
@@ -88,6 +88,5 @@
             </div>
         </div>
     </div>
-
 
 @endsection

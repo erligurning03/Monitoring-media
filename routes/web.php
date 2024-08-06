@@ -37,6 +37,18 @@ Route::get('/tambah-media-cetak', function () {
     return view('admin.tambah-media-cetak');
 });
 
+Route::get('/edit-media-cetak', function () {
+    return view('admin.edit-media-cetak');
+});
+
+Route::get('/edit-media-sosial', function () {
+    return view('admin.edit-media-sosial');
+});
+
+Route::get('/edit-media-online', function () {
+    return view('admin.edit-media-online');
+});
+
 Route::get('/media-sosial', function () {
     return view('admin.media-sosial');
 });
@@ -49,4 +61,6 @@ Route::get('/manajemen-user', function () {
 Route::get('/handle', function () {
     return view('admin.handle-user');
 });
+
+
 
