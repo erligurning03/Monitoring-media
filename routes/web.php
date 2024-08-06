@@ -26,8 +26,11 @@ Route::get('/dashboard', function () {
 //     return view('admin.tambah-media-online');
 // });
 Route::get('/media-online',[MediaOnlineController::class, 'index']);
-Route::get('/tambah-media-online',[MediaOnlineController::class, 'store']);
+Route::post('/media-online',[MediaOnlineController::class, 'store']);
+Route::get('/tambah-media-online',[MediaOnlineController::class, 'create']);
 Route::post('/tambah-media-online',[MediaOnlineController::class, 'store']);
+Route::get('/media-online/{id}/edit',[MediaOnlineController::class, 'edit']);//
+Route::put('/media-online/{id}',[MediaOnlineController::class, 'update']);//
 
 
 Route::get('/media-cetak', function () {
