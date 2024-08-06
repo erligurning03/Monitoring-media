@@ -2,6 +2,13 @@
 
 @section('css')
 <link rel="stylesheet" href="{{ asset('css/table.css') }}">
+<!-- Link Font Awesome dari CDN -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+<style>
+    .save-button i {
+        margin-right: 8px; /* Atur jarak antara ikon dan teks */
+    }
+</style>
 @endsection
 
 @section('content')
@@ -29,7 +36,7 @@
                 <td>Operator</td>
                 <td>
                     <button class="edit-button" onclick="openModal('Erli Gurning', 'Operator')"><i class="fas fa-edit"></i></button>
-                    <button class="delete-button" onclick="alert('Are you sure you want to delete Erli Gurning')"><i class="fas fa-trash-alt"></i></button>
+                    <button class="delete-button" onclick="alert('Are you sure you want to delete Erli Gurning?')"><i class="fas fa-trash-alt"></i></button>
                 </td>
             </tr>
         </table>
@@ -47,12 +54,13 @@
                     <option value="admin">Admin</option>
                     <option value="operator">Operator</option>
                 </select><br><br>
-                <button type="submit" class="save-button">Save</button>
+                <button type="submit" class="save-button">
+                    <i class="fas fa-save"></i> Save
+                </button>
             </form>
         </div>
     </div>
-
-<!-- end of The Modal untuk handle user -->
+    <!-- end of The Modal untuk handle user -->
 
 @endsection
 
@@ -86,5 +94,3 @@
 </script>
 
 @endsection
-
-
