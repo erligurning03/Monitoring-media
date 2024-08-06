@@ -9,6 +9,15 @@
 
 <div>
     <h1 style="color: black">Daftar Media Online</h1>
+    {{-- card berhasil input data --}}
+    @if(session('success'))
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            <strong>Berhasil</strong> {{ session('success') }}
+            {{-- <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button> --}}
+        </div>
+    @endif
+    {{-- end card berhasil input data --}}
+    
         <!-- Page Heading -->
         {{-- <h1 class="h3 mb-2 text-gray-800">Tables</h1>
         <p class="mb-4">ini berisi tentang data table</p> --}}
@@ -38,9 +47,6 @@
                                 <th>Foto Cuplikan Berita</th>
                                 <th>Media Publikasi</th>
                                 <th>Waktu Pantau</th>
-                                <th>Halaman</th>
-                                <th>Kolom</th>
-                                <th>Baris</th>
                                 <th>Jenis Berita</th>
                                 <th>Ringkasan Berita</th>
                                 <th>Saran Tindak Lanjut</th>
@@ -62,37 +68,45 @@
                             </tr>
                         </tfoot> --}}
                         <tbody>
+                            @foreach($media_onlines as $med_online )
                             <tr>
                                 <td>
-                                    <img src="{{asset('img/logo-diskominfo-sumut.jpg')}}" alt="" style="align:center; width: 65px; margin-top: 5px;margin-buttom: 5px;">
+                                    <img src="{{ $med_online->cuplikan_berita }}" alt="{{  $med_online->cuplikan_berita }}"  style="align:center; width: 65px; margin-top: 5px;margin-buttom: 5px;">
                                 </td>
+<<<<<<< Updated upstream
+                                <td>{{$med_online->media_publikasi}}</td>
+                                <td>{{$med_online->waktu_tinjau}}</td>
+                                <td>{{$med_online->jenis_berita}}</td>
+                                <td>{{$med_online->ringkasan_berita}}</td>
+                                <td>{{$med_online->saran_tindak_lanjut}}</td>
+=======
                                 <td>CNN</td>
                                 <td>7 agustus 2024</td>
-                                <td>34</td>
-                                <td>4</td>
-                                <td>5</td>
                                 <td>Rilis</td>
                                 <td>agus fatoni adalah pj gubernur sekarang, dia akan bertanggun jawab untuk sumatera utara sampai dilantiknya guberbur baru</td>
                                 <td>-</td>
+>>>>>>> Stashed changes
                                 <td>
-                                    <button class="edit-button" onclick="openModal('Fani Windari', 'Operator')"><i class="fas fa-edit"></i></button>
+                                    <a href="/edit-media-online" class="btn edit-button" style= "color: white;" onclick="openModal('Fani Windari', 'Operator')"><i class="fas fa-edit"></i></button>
+                                
+                                    </a>
                                     <button class="delete-button" onclick="alert('Are you sure you want to delete Fani Windari?')"><i class="fas fa-trash-alt"></i></button>
                                 </td>
                             </tr>
-                            <tr>
+                            @endforeach
+                            {{-- <tr>
                                 <td>
                                     <img src="{{asset('img/logo-diskominfo-sumut.jpg')}}" alt="" style="align:center; width: 65px; margin-top: 5px;margin-buttom: 5px;">
                                 </td>
                                 <td>CNN</td>
                                 <td>7 agustus 2024</td>
-                                <td>34</td>
-                                <td>4</td>
-                                <td>5</td>
                                 <td>Rilis</td>
                                 <td>agus fatoni adalah pj gubernur sekarang, dia akan bertanggun jawab untuk sumatera utara sampai dilantiknya guberbur baru</td>
                                 <td>-</td>
                                 <td>
-                                    <button class="edit-button" onclick="openModal('Fani Windari', 'Operator')"><i class="fas fa-edit"></i></button>
+                                    <a href="/edit-media-online" class="btn edit-button" style= "color: white;" onclick="openModal('Fani Windari', 'Operator')"><i class="fas fa-edit"></i></button>
+                                
+                                    </a>
                                     <button class="delete-button" onclick="alert('Are you sure you want to delete Fani Windari?')"><i class="fas fa-trash-alt"></i></button>
                                 </td>
                             </tr>
@@ -102,17 +116,17 @@
                                 </td>
                                 <td>CNN</td>
                                 <td>7 agustus 2024</td>
-                                <td>34</td>
-                                <td>4</td>
-                                <td>5</td>
                                 <td>Rilis</td>
                                 <td>agus fatoni adalah pj gubernur sekarang, dia akan bertanggun jawab untuk sumatera utara sampai dilantiknya guberbur baru</td>
                                 <td>-</td>
-                                <td>
-                                    <button class="edit-button" onclick="openModal('Fani Windari', 'Operator')"><i class="fas fa-edit"></i></button>
+                                <td> 
+                                    
+                                    <a href="/edit-media-online" class="btn edit-button" style= "color: white;" onclick="openModal('Fani Windari', 'Operator')"><i class="fas fa-edit"></i></button>
+                                
+                                    </a>
                                     <button class="delete-button" onclick="alert('Are you sure you want to delete Fani Windari?')"><i class="fas fa-trash-alt"></i></button>
                                 </td>
-                            </tr>                        
+                            </tr>                         --}}
                         </tbody>
                     </table>
                 </div>

@@ -41,7 +41,9 @@
                                 <td>Penjarakan pelaku</td>
                                 <td>3 Agustus 2024</td>
                                 <td>
-                                    <button class="edit-button" onclick=""><i class="fas fa-edit"></i></button>
+                                    <a href="/edit-media-sosial" class="btn edit-button" style= "color: white;" onclick="openModal('Fani Windari', 'Operator')"><i class="fas fa-edit"></i></button>
+                                
+                                    </a>
                                     <button class="delete-button" onclick="alert('Are you sure you want to delete?')"><i class="fas fa-trash-alt"></i></button>
                                 </td>
                             </tr>
@@ -53,7 +55,9 @@
                                 <td>-</td>
                                 <td>4 Agustus 2024</td>
                                 <td>
-                                    <button class="edit-button" onclick=""><i class="fas fa-edit"></i></button>
+                                    <a href="/edit-media-sosial" class="btn edit-button" style= "color: white;" onclick="openModal('Fani Windari', 'Operator')"><i class="fas fa-edit"></i></button>
+                                
+                                    </a>
                                     <button class="delete-button" onclick="alert('Are you sure you want to delete?')"><i class="fas fa-trash-alt"></i></button>
                                 </td>
                             </tr>
@@ -65,7 +69,9 @@
                                 <td>-</td>
                                 <td>5 Agustus 2024</td>
                                 <td>
-                                    <button class="edit-button" onclick=""><i class="fas fa-edit"></i></button>
+                                    <a href="/edit-media-sosial" class="btn edit-button" style= "color: white;" onclick="openModal('Fani Windari', 'Operator')"><i class="fas fa-edit"></i></button>
+                                
+                                    </a>
                                     <button class="delete-button" onclick="alert('Are you sure you want to delete?')"><i class="fas fa-trash-alt"></i></button>
                                 </td>
                             </tr>

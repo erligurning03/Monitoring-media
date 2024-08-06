@@ -15,10 +15,10 @@ return new class extends Migration
             $table->id();
             $table->foreignId('user_id')->constrained('users')->onDelete('cascade');
             $table->string('cuplikan_berita');
-            $table->string('media_publikasi')->unique();
+            $table->string('media_publikasi');
             // $table->timestamps('media_publikasi');
             $table->enum('jenis_berita',['positif', 'negatif','netral','rilis']);
-            $table->string('ringkasan_berita');
+            $table->string('ringkasan_berita',225);
             $table->string('saran_tindak_lanjut');
             $table->timestamp('waktu_tinjau');
         });

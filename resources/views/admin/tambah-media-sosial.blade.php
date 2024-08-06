@@ -3,7 +3,8 @@
 @section('css')
 <link rel="stylesheet" href="{{ asset('css/table.css') }}">
 @endsection
-
+<!-- Link Font Awesome dari CDN -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 @section('content')
 <div class="card">
     {{-- <form>
@@ -78,7 +79,9 @@
             <label for="tindak_lanjut" class="form-label">Saran Tindak Lanjut</label> <br>
             <textarea id="tindak_lanjut" name="tindak_lanjut" rows="10" cols="50" class="form-control"></textarea>
         </div>
-        <button type="submit" class="btn btn-primary">Simpan</button>
+        <button type="submit" class="save-button">
+            <i class="fas fa-save"> </i> Save
+        </button>
     </form>
 </div>
 

@@ -39,15 +39,18 @@ button {
 /* Styles for edit button */
 .edit-button {
     background-color: #FFC107;
+    /* padding: 6px 12px; */
 }
 
 .edit-button:hover {
     background-color: #e0a800;
+    /* margin: 4px 2px; */
 }
 
 /* Styles for delete button */
 .delete-button {
     background-color: #DC3545;
+    padding: 6px 12px;
 }
 
 .delete-button:hover {
@@ -244,4 +247,7 @@ button {
 .save-button svg {
     fill: white;
     margin-right: 8px; /* Tambahkan jarak antara ikon dan teks */
+}
+.save-button i {
+    margin-right: 8px; /* Atur jarak antara ikon dan teks */
 }
