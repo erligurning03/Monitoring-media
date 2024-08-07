@@ -54,7 +54,7 @@
 
     <form>
         <div class="form-group">
-            <label for="formFile" class="form-label">Foto Cuplikan Media Cetak</label>
+            <label for="formFile" class="form-label">Foto Cuplikan Media Sosial</label>
             <input class="form-control" type="file" id="formFile">
         </div> 
         <div class="form-group">
@@ -62,7 +62,7 @@
             <input type="date" class="form-control">
         </div>     
         <div class="form-group">
-            <label for="exampleInputEmail1" class="form-label">Jenis Berita :</label>
+            <label for="exampleInputEmail1" class="form-label">Jenis Komentar :</label>
             <select class="form-control form-control-sm" aria-label=".form-select-sm example">
                 <option value="positif">Positif</option>
                 <option value="negati">Negatif</option>
@@ -71,26 +71,6 @@
             </select>
         </div>
         <div class="form-group">
-            <label for="exampleInputEmail1" class="form-label">Media Pantau</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-        </div>
-        
-        <div class="form-row">
-            <div class="form-group col-md-4">
-                <label for="exampleInputEmail1" class="form-label">Halaman</label>
-                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-            </div>
-            <div class="form-group col-md-4">
-                <label for="exampleInputEmail1" class="form-label">Kolom</label>
-                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-            </div>
-            <div class="form-group col-md-4">
-                <label for="exampleInputEmail1" class="form-label">Baris</label>
-                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-            </div>
-        </div>
-        
-        <div class="form-group">
             <label for="ringkasan_berita" class="form-label">Ringkasan Berita</label> <br>
             <textarea id="ringkasan_berita" name="ringkasan_berita" rows="10" cols="50" class="form-control"></textarea>
         </div>
@@ -98,7 +78,9 @@
             <label for="tindak_lanjut" class="form-label">Saran Tindak Lanjut</label> <br>
             <textarea id="tindak_lanjut" name="tindak_lanjut" rows="10" cols="50" class="form-control"></textarea>
         </div>
-        <button type="submit" class="btn btn-primary">Simpan</button>
+        <button type="submit" class="save-button">
+            <i class="fas fa-save"> </i> Save
+        </button>
     </form>
 </div>
 

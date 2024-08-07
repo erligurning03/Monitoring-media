@@ -38,10 +38,19 @@ Route::post('/tambah-media-online',[MediaOnlineController::class, 'store']);
 Route::get('/media-cetak', function () {
     return view('admin.media-cetak');
 });
+Route::get('/media-sosial', function () {
+    return view('admin.media-sosial');
+});
 Route::get('/tambah-media-cetak', function () {
     return view('admin.tambah-media-cetak');
-});
 
+});
+Route::get('/tambah-media-online', function () {
+    return view('admin.tambah-media-online');
+});
+Route::get('/tambah-media-sosial', function () {
+    return view('admin.tambah-media-sosial');
+});
 Route::get('/edit-media-cetak', function () {
     return view('admin.edit-media-cetak');
 });

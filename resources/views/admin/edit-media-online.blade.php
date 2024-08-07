@@ -85,7 +85,9 @@
             <label for="saran_tindak_lanjut" class="form-label">Saran Tindak Lanjut</label> <br>
             <textarea id="saran_tindak_lanjut" name="saran_tindak_lanjut" rows="10" cols="50" class="form-control"></textarea>
         </div>
-        <button type="submit" class="btn btn-primary">Simpan</button>
+        <button type="submit" class="save-button">
+            <i class="fas fa-save"> </i> Save
+        </button>
     </form>
 </div>
 

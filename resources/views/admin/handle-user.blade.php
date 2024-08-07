@@ -5,9 +5,7 @@
 <!-- Link Font Awesome dari CDN -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 <style>
-    .save-button i {
-        margin-right: 8px; /* Atur jarak antara ikon dan teks */
-    }
+   
 </style>
 @endsection
 
@@ -57,7 +55,7 @@
                 <button type="submit" class="save-button">
                     <i class="fas fa-save"></i> Save
                 </button>
-            </form>
+            </form>   
         </div>
     </div>
     <!-- end of The Modal untuk handle user -->
