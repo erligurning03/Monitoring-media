@@ -25,6 +25,8 @@ Route::get('/dashboard', function () {
 // Route::get('/tambah-media-online', function () {
 //     return view('admin.tambah-media-online');
 // });
+
+//route media online
 Route::get('/media-online',[MediaOnlineController::class, 'index']);
 Route::post('/media-online',[MediaOnlineController::class, 'store']);
 Route::get('/tambah-media-online',[MediaOnlineController::class, 'create']);
@@ -32,7 +34,7 @@ Route::post('/tambah-media-online',[MediaOnlineController::class, 'store']);
 // Route::get('/edit-media-online/{id}/edit',[MediaOnlineController::class, 'edit']);//
 // Route::put('/media-online/{id}',[MediaOnlineController::class, 'update']);//
 
-
+//route media cetak
 Route::get('/media-cetak', function () {
     return view('admin.media-cetak');
 });
@@ -44,6 +46,8 @@ Route::get('/edit-media-cetak', function () {
     return view('admin.edit-media-cetak');
 });
 
+
+//route media sosial
 Route::get('/edit-media-sosial', function () {
     return view('admin.edit-media-sosial');
 });
@@ -56,6 +60,8 @@ Route::get('/media-sosial', function () {
     return view('admin.media-sosial');
 });
 
+
+//route manajemen user
 Route::get('/manajemen-user', function () {
     return view('admin.manajemen-user');
 });
