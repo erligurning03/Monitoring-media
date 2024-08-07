@@ -6,54 +6,6 @@
 
 @section('content')
 <div class="card">
-    {{-- <form>
-        <div class="mb-3">
-            <label for="formFile" class="form-label">Foto Cuplikan Media Online</label>
-            <input class="form-control" type="file" id="formFile">
-        </div> 
-        <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Waktu Pantau : </label>
-            <input type="date">
-        </div>     
-        <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Jenis Berita : </label>
-            <select class="form-select form-select-sm" aria-label=".form-select-sm example">
-                {{-- <option selected>Jenis Berita</option> --}}        {{--
-                <option value="positif">Positif</option>
-                <option value="negati">Negatif</option>
-                <option value="netral">Netral</option>
-                <option value="rilis">Rilis</option>
-            </select>
-        </div>
-        <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Media Pantau</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-        </div>
-        <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Halaman</label>
-            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-        </div>
-        <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Kolom</label>
-            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-        </div>
-        <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Baris</label>
-            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-        </div>
-        <div class="mb-3">
-            <label for="ringkasan_berita" class="form-label">Ringkasan Berita</label> <br>
-            <textarea id="ringkasan_berita" name="ringkasan_berita" rows="10" cols="50"></textarea>
-        </div>
-        <div class="mb-3">
-            <label for="tindak_lanjut" class="form-label">Saran Tindak Lanjut</label> <br>
-            <textarea id="tindak_lanjut" name="ringkasan_berita" rows="10" cols="50"></textarea>
-        </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
-    </form> --}}
-
-    
-
     <form action="/media-online" method="post">
         @csrf
         <div class="form-group">

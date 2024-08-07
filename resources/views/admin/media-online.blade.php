@@ -73,19 +73,11 @@
                                 <td>
                                     <img src="{{ $med_online->cuplikan_berita }}" alt="{{  $med_online->cuplikan_berita }}"  style="align:center; width: 65px; margin-top: 5px;margin-buttom: 5px;">
                                 </td>
-<<<<<<< Updated upstream
                                 <td>{{$med_online->media_publikasi}}</td>
                                 <td>{{$med_online->waktu_tinjau}}</td>
                                 <td>{{$med_online->jenis_berita}}</td>
                                 <td>{{$med_online->ringkasan_berita}}</td>
                                 <td>{{$med_online->saran_tindak_lanjut}}</td>
-=======
-                                <td>CNN</td>
-                                <td>7 agustus 2024</td>
-                                <td>Rilis</td>
-                                <td>agus fatoni adalah pj gubernur sekarang, dia akan bertanggun jawab untuk sumatera utara sampai dilantiknya guberbur baru</td>
-                                <td>-</td>
->>>>>>> Stashed changes
                                 <td>
                                     <a href="/edit-media-online" class="btn edit-button" style= "color: white;" onclick="openModal('Fani Windari', 'Operator')"><i class="fas fa-edit"></i></button>
                                 
