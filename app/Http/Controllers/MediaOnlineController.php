@@ -54,9 +54,9 @@ class MediaOnlineController extends Controller
     
     public function edit($id){
         //dd($id);
-        $media_online = DB::table('media_onlines')->where('id', $id)->first();
+        $media_onlines = DB::table('media_onlines')->where('id', $id)->first();
         // dd($media_online);
-        // return view('edit')
+        return view('admin.edit-media-online', compact('media_onlines'));//['media_onlines'=> $media_online]);
 
     }
 
