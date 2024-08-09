@@ -39,7 +39,7 @@ button {
 /* Styles for edit button */
 .edit-button {
     background-color: #FFC107;
-    /* padding: 6px 12px; */
+    padding: 6px 12px;
 }
 
 .edit-button:hover {
@@ -50,7 +50,7 @@ button {
 /* Styles for delete button */
 .delete-button {
     background-color: #DC3545;
-    padding: 6px 12px;
+    /* padding: 6px 12px; */
 }
 
 .delete-button:hover {
@@ -142,7 +142,7 @@ tr:nth-child(even) {
 button {
     color: white;
     border: none;
-    padding: 10px 20px;
+    /* padding: 10px 20px; */
     text-align: center;
     text-decoration: none;
     display: inline-block;

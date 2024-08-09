@@ -21,6 +21,7 @@ return new class extends Migration
             $table->string('ringkasan_berita',225);
             $table->string('saran_tindak_lanjut');
             $table->timestamp('waktu_tinjau');
+            $table->timestamps(); 
         });
     }
 

@@ -10,7 +10,7 @@ class MediaOnlineController extends Controller
 {
     public function index(){
 
-        $media_onlines = DB::table('media_onlines')->get();
+        $media_onlines = DB::table('media_onlines')->orderBy('id','desc')->get();
         
 
         return view('admin.media-online', compact('media_onlines'));
@@ -56,8 +56,31 @@ class MediaOnlineController extends Controller
         //dd($id);
         $media_onlines = DB::table('media_onlines')->where('id', $id)->first();
         // dd($media_online);
-        return view('admin.edit-media-online', compact('media_onlines'));//['media_onlines'=> $media_online]);
+        return view('admin.edit-media-online',['media_onlines'=> $media_onlines]);// compact('media_onlines'));//
 
+    }
+
+    public function update(Request $request, $id){
+        DB::table('media_onlines')->where('id', $id)->update([
+            'user_id' => 1, //ini harus diganti ketika login sudah dikerjakan
+            'cuplikan_berita' => $request->cuplikan_berita,
+            'media_publikasi'=> $request->media_publikasi,
+            'jenis_berita' => $request->jenis_berita,
+            'ringkasan_berita' => $request ->ringkasan_berita,    
+            'saran_tindak_lanjut'=> $request -> saran_tindak_lanjut,
+            'waktu_tinjau' => $request->waktu_tinjau,
+        ]);
+        return redirect('/media-online'); //ini redirect ke route yang terdaftar di web.php
+
+        // dd($id);
+    }
+
+    public function destroy($id){
+        // $media_onlines = DB::table('media_onlines')->where('id', $id)->first();
+        // $media_onlines->delete();
+
+        DB::table('media_onlines')->where('id', $id)->delete();
+        return redirect('/media-online');
     }
 
     

@@ -79,10 +79,18 @@
                                 <td>{{$med_online->ringkasan_berita}}</td>
                                 <td>{{$med_online->saran_tindak_lanjut}}</td>
                                 <td>
-                                    <a href="/edit-media-online" class="btn edit-button" style= "color: white;" onclick="openModal('Fani Windari', 'Operator')"><i class="fas fa-edit"></i></button>
-                                
+                                    <a href="/edit-media-online/{{$med_online->id}}/edit" class="btn edit-button" style= "color: white;" onclick="#">
+                                        <i class="fas fa-edit"></i>                             
                                     </a>
-                                    <button class="delete-button" onclick="alert('Are you sure you want to delete Fani Windari?')"><i class="fas fa-trash-alt"></i></button>
+                                    {{-- <button class="edit-button" style= "color: white;" action="/edit-media-online/{{$media_onlines->id}}"><i class="fas fa-edit"></i></button> --}}
+                                    {{-- <a href="/edit-media-online/{{$media_onlines->id}}" class="edit-button" style="color: white;">
+                                        <button style="color: white;"><i class="fas fa-edit"></i></button>
+                                    </a> --}}
+                                    <form action="/media-online/{{$med_online->id}}" method="post">
+                                        @csrf
+                                        @method('delete')
+                                        <button class="delete-button" onclick="alert('Are you sure you want to delete Fani Windari?')"><i class="fas fa-trash-alt"></i></button>
+                                    </form>
                                 </td>
                             </tr>
                             @endforeach

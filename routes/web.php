@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\MediaCetakController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MediaOnlineController;
 
@@ -31,26 +32,38 @@ Route::get('/media-online',[MediaOnlineController::class, 'index']);
 Route::post('/media-online',[MediaOnlineController::class, 'store']);
 Route::get('/tambah-media-online',[MediaOnlineController::class, 'create']);
 Route::post('/tambah-media-online',[MediaOnlineController::class, 'store']);
-// Route::get('/edit-media-online/{id}/edit',[MediaOnlineController::class, 'edit']);//
-// Route::put('/media-online/{id}',[MediaOnlineController::class, 'update']);//
+Route::get('/edit-media-online/{id}/edit',[MediaOnlineController::class, 'edit']);//
+Route::put('/media-online/{id}',[MediaOnlineController::class, 'update']);//
+//put untuk update data
+Route::delete('media-online/{id}', [MediaOnlineController::class, 'destroy']);
 
 //route media cetak
-Route::get('/media-cetak', function () {
-    return view('admin.media-cetak');
-});
-Route::get('/media-sosial', function () {
-    return view('admin.media-sosial');
-});
-Route::get('/tambah-media-cetak', function () {
-    return view('admin.tambah-media-cetak');
+// Route::get('/media-cetak', function () {
+//     return view('admin.media-cetak');
+// });
+Route::get('/media-cetak',[MediaCetakController::class, 'index']);
+Route::post('/media-cetak',[MediaCetakController::class, 'store']);
+Route::get('/tambah-media-cetak',[MediaCetakController::class, 'create']);
+Route::post('/tambah-media-cetak',[MediaCetakController::class, 'store']);
+Route::get('/edit-media-cetak/{id}/edit',[MediaCetakController::class, 'edit']);//
+Route::put('/media-cetak/{id}',[MediaCetakController::class, 'update']);//
+Route::delete('media-cetak/{id}', [MediaCetakController::class, 'destroy']);
 
-});
-Route::get('/tambah-media-online', function () {
-    return view('admin.tambah-media-online');
-});
-Route::get('/tambah-media-sosial', function () {
-    return view('admin.tambah-media-sosial');
-});
+// Route::get('/tambah-media-cetak', function () {
+//     return view('admin.tambah-media-cetak');
+
+// });
+
+// Route::get('/media-sosial', function () {
+//     return view('admin.media-sosial');
+// });
+
+// Route::get('/tambah-media-online', function () {
+//     return view('admin.tambah-media-online');
+// });
+// Route::get('/tambah-media-sosial', function () {
+//     return view('admin.tambah-media-sosial');
+// });
 Route::get('/edit-media-cetak', function () {
     return view('admin.edit-media-cetak');
 });

@@ -68,6 +68,7 @@
         <div class="form-group">
             <label for="jenis_berita" class="form-label">Jenis Berita :</label>
             <select class="form-control form-control-sm" aria-label=".form-select-sm example" name="jenis_berita">
+                <option value="">Pilih jenis berita</option>
                 <option value="positif">Positif</option>
                 <option value="negatif">Negatif</option>
                 <option value="netral">Netral</option>

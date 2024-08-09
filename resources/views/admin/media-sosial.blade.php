@@ -72,6 +72,8 @@
                                     <a href="/edit-media-sosial" class="btn edit-button" style= "color: white;" onclick="openModal('Fani Windari', 'Operator')"><i class="fas fa-edit"></i></button>
                                 
                                     </a>
+                                    {{-- <button class="delete-button" onclick="alert('Are you sure you want to delete?')"><i class="fas fa-trash-alt"></i></button> --}}
+                                    {{-- <a class="btn button delete-button" onclick="alert('Are you sure you want to delete?')"><i class="fas fa-trash-alt"></i></a> --}}
                                     <button class="delete-button" onclick="alert('Are you sure you want to delete?')"><i class="fas fa-trash-alt"></i></button>
                                 </td>
                             </tr>
