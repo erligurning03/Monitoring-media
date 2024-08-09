@@ -3,7 +3,7 @@
 use App\Http\Controllers\MediaCetakController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MediaOnlineController;
-
+use App\Http\Controllers\RegisterationController;
 
 /*
 |--------------------------------------------------------------------------
@@ -93,5 +93,8 @@ Route::get('/handle', function () {
     return view('admin.handle-user');
 });
 
+
+
+Route::get('register', [RegisterationController::class, 'create'])->name('register');
 
 

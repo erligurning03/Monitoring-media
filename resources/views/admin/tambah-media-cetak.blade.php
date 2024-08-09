@@ -55,51 +55,81 @@
 
     <form action="/media-cetak" method="POST">
         @csrf
+        {{-- @foreach($errors->all() as $error)
+            {{ $error }}
+        @endforeach --}}
         <div class="form-group">
             <label for="cuplikan_berita" class="form-label">Foto Cuplikan Media Cetak</label>
-            <input class="form-control" type="file" id="cuplikan_berita" name="cuplikan_berita">
+            <input class="form-control @error('cuplikan_berita') is-invalid @enderror" type="file" id="cuplikan_berita" name="cuplikan_berita">
+            @error('cuplikan_berita')
+                <span class="invalid-feedback">{{$message}}</span>
+            @enderror
         </div> 
         <div class="form-group">
             <label for="waktu_tinjau" class="form-label">Waktu Tinjau :</label>
-            <input type="date" class="form-control" name="waktu_tinjau">
+            <input type="date" class="form-control  @error('waktu_tinjau') is-invalid @enderror" name="waktu_tinjau">
+            @error('waktu_tinjau')
+                <span class="invalid-feedback">{{$message}}</span>
+            @enderror
         </div>     
         <div class="form-group">
             <label for="jenis_berita" class="form-label">Jenis Berita :</label>
-            <select class="form-control form-control-sm" aria-label=".form-select-sm example" name="jenis_berita">
+            <select class="form-control form-control-sm @error('jenis_berita') is-invalid @enderror" aria-label=".form-select-sm example" name="jenis_berita">
                 {{-- <option value="">Pilih jenis berita</option> --}}
                 <option value="positif">Positif</option>
                 <option value="negatif">Negatif</option>
                 <option value="netral">Netral</option>
                 <option value="rilis">Rilis</option>
             </select>
+            @error('jenis_berita')
+                <span class="invalid-feedback">{{$message}}</span>
+            @enderror
         </div>
         <div class="form-group">
             <label for="media_publikasi" class="form-label">Media Publikasi</label>
-            <input type="text" class="form-control" id="media_publikasi" aria-describedby="media_publikasi" name="media_publikasi">
+            <input type="text" class="form-control @error('media_publikasi') is-invalid @enderror" id="media_publikasi" aria-describedby="media_publikasi" name="media_publikasi">
+            @error('media_publikasi')
+                <span class="invalid-feedback">{{$message}}</span>
+            @enderror
         </div>
         
         <div class="form-row">
             <div class="form-group col-md-4">
                 <label for="halaman" class="form-label">Halaman</label>
-                <input type="number" class="form-control" id="halaman" aria-describedby="halaman" name="halaman">
+                <input type="number" class="form-control @error('halaman') is-invalid @enderror" id="halaman" aria-describedby="halaman" name="halaman">
+                @error('halaman')
+                    <span class="invalid-feedback">{{$message}}</span>
+                @enderror
             </div>
             <div class="form-group col-md-4">
                 <label for="kolom" class="form-label">Kolom</label>
-                <input type="number" class="form-control" id="kolom" aria-describedby="kolom" name="kolom">
+                <input type="number" class="form-control @error('kolom') is-invalid @enderror" id="kolom" aria-describedby="kolom" name="kolom">
+                @error('kolom')
+                    <span class="invalid-feedback">{{$message}}</span>
+                @enderror
             </div>
             <div class="form-group col-md-4">
                 <label for="baris" class="form-label">Baris</label>
-                <input type="number" class="form-control" id="baris" aria-describedby="baris" name="baris">
+                <input type="number" class="form-control @error('baris') is-invalid @enderror" id="baris" aria-describedby="baris" name="baris">
+                @error('baris')
+                    <span class="invalid-feedback">{{$message}}</span>
+                @enderror
             </div>
         </div>
         
         <div class="form-group">
             <label for="ringkasan_berita" class="form-label">Ringkasan Berita</label> <br>
-            <textarea id="ringkasan_berita" name="ringkasan_berita" rows="10" cols="50" class="form-control"></textarea>
+            <textarea id="ringkasan_berita" name="ringkasan_berita" rows="10" cols="50" class="form-control @error('ringkasan_berita') is-invalid @enderror"></textarea>
+            @error('ringkasan_berita')
+                <span class="invalid-feedback">{{$message}}</span>
+            @enderror
         </div>
         <div class="form-group">
             <label for="saran_tindak_lanjut" class="form-label">Saran Tindak Lanjut</label> <br>
-            <textarea id="saran_tindak_lanjut" name="saran_tindak_lanjut" rows="10" cols="50" class="form-control"></textarea>
+            <textarea id="saran_tindak_lanjut" name="saran_tindak_lanjut" rows="10" cols="50" class="form-control @error('saran_tindak_lanjut') is-invalid @enderror"></textarea>
+            @error('saran_tindak_lanjut')
+                <span class="invalid-feedback">{{$message}}</span>
+            @enderror
         </div>
         <button type="submit" class="save-button">
             <i class="fas fa-save"></i> Save
