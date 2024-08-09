@@ -93,6 +93,18 @@ Route::get('/handle', function () {
     return view('admin.handle-user');
 });
 
+Route::get('/login', function () {
+    return view('login.login-user');
+});
+
+Route::get('/login', function () {
+    return view('admin.login');
+});
+
+Route::get('/register', function () {
+    return view('admin.register');
+});
+
 
 
 Route::get('register', [RegisterationController::class, 'create'])->name('register');
