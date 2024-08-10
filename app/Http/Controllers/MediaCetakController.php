@@ -26,6 +26,8 @@ class MediaCetakController extends Controller
 
         $request->validate([
             'cuplikan_berita' => 'required|string|max:200',
+            // 'cuplikan_berita' => ['required','image','mimes:jpeg,png,jpg,gif,svg','max:1000'],
+            // 'cuplikan_berita' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:1000',
             'media_publikasi' => 'required|string|max:100',//|unique:media_cetaks'
             'halaman'=> 'required|integer|max:4',
             'kolom' => 'required|integer|max:4',

@@ -108,5 +108,5 @@ Route::get('/register', function () {
 
 
 Route::get('register', [RegisterationController::class, 'create'])->name('register');
-
+Route::post('register', [RegisterationController::class, 'store'])->name('register');
 

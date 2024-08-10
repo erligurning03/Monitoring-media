@@ -60,21 +60,21 @@
         @endforeach --}}
         <div class="form-group">
             <label for="cuplikan_berita" class="form-label">Foto Cuplikan Media Cetak</label>
-            <input class="form-control @error('cuplikan_berita') is-invalid @enderror" type="file" id="cuplikan_berita" name="cuplikan_berita">
+            <input class="form-control @error('cuplikan_berita') is-invalid @enderror" value="{{old('cuplikan_berita')}}" type="file" id="cuplikan_berita" name="cuplikan_berita">
             @error('cuplikan_berita')
                 <span class="invalid-feedback">{{$message}}</span>
             @enderror
         </div> 
         <div class="form-group">
             <label for="waktu_tinjau" class="form-label">Waktu Tinjau :</label>
-            <input type="date" class="form-control  @error('waktu_tinjau') is-invalid @enderror" name="waktu_tinjau">
+            <input type="date" class="form-control  @error('waktu_tinjau') is-invalid @enderror" value="{{old('waktu_tinjau')}}" name="waktu_tinjau">
             @error('waktu_tinjau')
                 <span class="invalid-feedback">{{$message}}</span>
             @enderror
         </div>     
         <div class="form-group">
             <label for="jenis_berita" class="form-label">Jenis Berita :</label>
-            <select class="form-control form-control-sm @error('jenis_berita') is-invalid @enderror" aria-label=".form-select-sm example" name="jenis_berita">
+            <select class="form-control form-control-sm @error('jenis_berita') is-invalid @enderror" aria-label=".form-select-sm example" value="{{old('jenis_berita')}}" name="jenis_berita">
                 {{-- <option value="">Pilih jenis berita</option> --}}
                 <option value="positif">Positif</option>
                 <option value="negatif">Negatif</option>
@@ -87,7 +87,7 @@
         </div>
         <div class="form-group">
             <label for="media_publikasi" class="form-label">Media Publikasi</label>
-            <input type="text" class="form-control @error('media_publikasi') is-invalid @enderror" id="media_publikasi" aria-describedby="media_publikasi" name="media_publikasi">
+            <input type="text" class="form-control @error('media_publikasi') is-invalid @enderror" id="media_publikasi" value="{{old('media_publikasi')}}" aria-describedby="media_publikasi" name="media_publikasi">
             @error('media_publikasi')
                 <span class="invalid-feedback">{{$message}}</span>
             @enderror
@@ -96,21 +96,21 @@
         <div class="form-row">
             <div class="form-group col-md-4">
                 <label for="halaman" class="form-label">Halaman</label>
-                <input type="number" class="form-control @error('halaman') is-invalid @enderror" id="halaman" aria-describedby="halaman" name="halaman">
+                <input type="number" class="form-control @error('halaman') is-invalid @enderror" id="halaman" value="{{old('halaman')}}" aria-describedby="halaman" name="halaman">
                 @error('halaman')
                     <span class="invalid-feedback">{{$message}}</span>
                 @enderror
             </div>
             <div class="form-group col-md-4">
                 <label for="kolom" class="form-label">Kolom</label>
-                <input type="number" class="form-control @error('kolom') is-invalid @enderror" id="kolom" aria-describedby="kolom" name="kolom">
+                <input type="number" class="form-control @error('kolom') is-invalid @enderror" id="kolom" aria-describedby="kolom" value="{{old('kolom')}}" name="kolom">
                 @error('kolom')
                     <span class="invalid-feedback">{{$message}}</span>
                 @enderror
             </div>
             <div class="form-group col-md-4">
                 <label for="baris" class="form-label">Baris</label>
-                <input type="number" class="form-control @error('baris') is-invalid @enderror" id="baris" aria-describedby="baris" name="baris">
+                <input type="number" class="form-control @error('baris') is-invalid @enderror" id="baris" aria-describedby="baris" value="{{old('baris')}}" name="baris">
                 @error('baris')
                     <span class="invalid-feedback">{{$message}}</span>
                 @enderror
@@ -119,14 +119,14 @@
         
         <div class="form-group">
             <label for="ringkasan_berita" class="form-label">Ringkasan Berita</label> <br>
-            <textarea id="ringkasan_berita" name="ringkasan_berita" rows="10" cols="50" class="form-control @error('ringkasan_berita') is-invalid @enderror"></textarea>
+            <textarea id="ringkasan_berita" name="ringkasan_berita" rows="10" cols="50" class="form-control @error('ringkasan_berita') is-invalid @enderror"> {{old('ringkasan_berita')}}</textarea>
             @error('ringkasan_berita')
                 <span class="invalid-feedback">{{$message}}</span>
             @enderror
         </div>
         <div class="form-group">
             <label for="saran_tindak_lanjut" class="form-label">Saran Tindak Lanjut</label> <br>
-            <textarea id="saran_tindak_lanjut" name="saran_tindak_lanjut" rows="10" cols="50" class="form-control @error('saran_tindak_lanjut') is-invalid @enderror"></textarea>
+            <textarea id="saran_tindak_lanjut" name="saran_tindak_lanjut" rows="10" cols="50" class="form-control @error('saran_tindak_lanjut') is-invalid @enderror" >{{old('saran_tindak_lanjut')}}</textarea>
             @error('saran_tindak_lanjut')
                 <span class="invalid-feedback">{{$message}}</span>
             @enderror

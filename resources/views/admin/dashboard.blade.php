@@ -2,10 +2,18 @@
 
 @section('content')
 
+
+
 {{-- statistik monitoringn media online --}}
 <h1 class="h3 mb-2 fw-bold" style="text-align: center; color:black"><strong>statistik monitoring media</strong></h1>
 
 <div class="container">
+    @if(session()->has('success'))
+        <div class="alert alert-success" role="alert">
+            {{ session()->get('success')}}
+        </div>
+    @endif
+    
     <div class="row">
       <div class="col-sm">
         <div class="card shadow mb-2" style="max-width: 100%; width: 28rem;">
