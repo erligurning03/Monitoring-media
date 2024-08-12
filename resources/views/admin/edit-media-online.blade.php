@@ -14,8 +14,13 @@
         @csrf
         @method('put') <!-- Tambahkan ini jika menggunakan metode PUT -->
         <div class="form-group">
+            {{-- tampilkan foto cuplikan berita jika ada --}}
+            @if($media_onlines->cuplikan_berita)
+                <img src="{{asset('storage/media-online/'. $media_onlines->cuplikan_berita)}}" alt="" width="200px">
+            @endif
             <label for="cuplikan_berita" class="form-label">Foto Cuplikan Media Online</label>
             <input class="form-control" type="file" id="cuplikan_berita" name="cuplikan_berita">
+            <small style="color: blue">input foto baru jika ingin menggantinya</small>
         </div> 
         <div class="form-group">
             <label for="waktu_tinjau" class="form-label">Waktu Tinjau :</label>

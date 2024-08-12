@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\LoginController;
 use App\Http\Controllers\MediaCetakController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MediaOnlineController;
@@ -105,8 +106,16 @@ Route::get('/register', function () {
     return view('admin.register');
 });
 
+//cara 3 masukin middleware tolak buka halaman login jika sudah login
+Route::middleware('guest')->group(function(){
 
+    Route::get('register', [RegisterationController::class, 'create'])->name('register');
+    Route::post('register', [RegisterationController::class, 'store'])->name('register');
 
-Route::get('register', [RegisterationController::class, 'create'])->name('register');
-Route::post('register', [RegisterationController::class, 'store'])->name('register');
+    Route::get('login', [LoginController::class, 'create'])->name('login');
+    Route::post('login', [LoginController::class, 'store'])->name('login');
+});
+//end of cara 3 masukin middleware tolak buka halaman login jika sudah login
+//Route::get('register', [RegisterationController::class, 'create'])->name('register')->middleware('guest'); //(cara 2) masukin middleware tolak buka halaman login jika sudah login
+
 

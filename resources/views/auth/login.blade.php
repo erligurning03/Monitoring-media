@@ -32,8 +32,9 @@
                                 <div class="text-center"> 
                                     <h1 class="h4 text-gray-900 mb-4">Login User</h1>
                                 </div>
-                                <form class="user">
-                                    <div class="form-group">
+                                <form class="user" action="{{route('login')}}" method="POST" enctype="multipart/form-data">
+                                    @csrf
+                                    {{-- <div class="form-group">
                                         <input type="name" class="form-control form-control-user" id="exampleInputName" aria-describedby="nameHelp" placeholder="Enter Your Name...">
                                     </div>
                                     <div class="form-group">
@@ -41,15 +42,35 @@
                                     </div>
                                     <div class="form-group">
                                        
+                                    </div> --}}
+                                    <div class="form-group">
+                                        <label for="email">Email</label>
+                                        <input type="email" value="{{old('email')}}" class="form-control form-control-user" id="email" name="email" placeholder="Input email anda...">
+                                        @error('email')
+                                            <div class="text-danger mt-2">
+                                                {{$message}}
+                                            </div>
+                                        @enderror
                                     </div>
-                                    <a href="/dashboard" class="btn btn-primary btn-user btn-block">
+                                    <div class="form-group">
+                                        <label for="password">Password</label>
+                                        <input type="password" value="{{old('password')}}" class="form-control form-control-user" id="password" name="password" placeholder="input password anda...">
+                                        @error('password')
+                                            <div class="text-danger mt-2">
+                                                {{$message}}
+                                            </div>
+                                        @enderror
+                                    </div>
+                                    <button type="submit" class="btn btn-primary btn-user btn-block custom-save-button">
+                                        {{-- <i class="fas fa-save"></i> Login --}}
                                         Login
-                                    </a>
+                                    </button>
                                 </form>
                                 <div class="text-center">
                                     {{-- <a class="small" href="forgot-password.html">Forgot Password?</a> --}}
                                 </div>
                                 <div class="text-center">
+                                    <p>belum punnya akun?</p>
                                     <a class="small" href="/register">Register</a>
                                  </div>
                             </div>

@@ -53,7 +53,7 @@
         <button type="submit" class="btn btn-primary">Submit</button>
     </form> --}}
 
-    <form action="/media-online" method="post">
+    <form action="/media-online" method="post" enctype="multipart/form-data">
         @csrf
         <div class="form-group">
             <label for="cuplikan_berita" class="form-label">Foto Cuplikan Media Online</label>

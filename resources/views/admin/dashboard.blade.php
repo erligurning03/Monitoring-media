@@ -14,6 +14,12 @@
         </div>
     @endif
     
+        {{-- kode ini untuk menunjukkan kalau dia login maka munculkan bagian x dari web => tampilkan hanya jika dia login--}}
+        {{-- @if(Auth::check)
+            kontennya yg ma ditampilkan
+        @endif --}}
+
+
     <div class="row">
       <div class="col-sm">
         <div class="card shadow mb-2" style="max-width: 100%; width: 28rem;">

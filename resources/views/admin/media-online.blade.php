@@ -71,7 +71,8 @@
                             @foreach($media_onlines as $med_online )
                             <tr>
                                 <td>
-                                    <img src="{{ $med_online->cuplikan_berita }}" alt="{{  $med_online->cuplikan_berita }}"  style="align:center; width: 65px; margin-top: 5px;margin-buttom: 5px;">
+                                    {{-- <img src="{{ $med_online->cuplikan_berita }}" alt="{{  $med_online->cuplikan_berita }}"  style="align:center; width: 65px; margin-top: 5px;margin-buttom: 5px;"> --}}
+                                    <img src="{{ asset('storage/media-online/'.$med_online->cuplikan_berita) }}" alt="{{  $med_online->cuplikan_berita }}"  style="align:center; width: 400px; margin-top: 5px;margin-buttom: 5px;">
                                 </td>
                                 <td>{{$med_online->media_publikasi}}</td>
                                 <td>{{$med_online->waktu_tinjau}}</td>

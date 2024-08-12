@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Storage;
 use Psy\TabCompletion\Matcher\FunctionsMatcher;
 
 class MediaOnlineController extends Controller
@@ -26,7 +27,8 @@ class MediaOnlineController extends Controller
     public function store(Request $request){
 
         $request->validate([
-            'cuplikan_berita' => 'required|string',
+            // 'cuplikan_berita' => 'required|string',
+            'cuplikan_berita' => 'required|mimes:jpeg,png,jpg,svg|max:2048',
             'media_publikasi' => 'required|string',//|unique:media_onlines'
             'jenis_berita' => 'required|in:positif,negatif,netral,rilis',
             'ringkasan_berita' => 'required|string',
@@ -36,10 +38,20 @@ class MediaOnlineController extends Controller
         
         // return view('admin.tambah-media-online');
         //dd('submitted');
+
+        //start untuk upload gambar
+        $cuplikan_berita = $request->file('cuplikan_berita');
+        $filename = date('d-m-Y').$cuplikan_berita->getClientOriginalName();
+        $path = 'media-online/'.$filename;
+
+        Storage::disk('public')->put($path, file_get_contents($cuplikan_berita));
+        //end untuk upload gambar
+
         DB::table('media_onlines')->insert([
             //'user_id' => auth()->id(),
             'user_id' => 1, //ini harus diganti ketika login sudah dikerjakan
-            'cuplikan_berita' => $request->cuplikan_berita,
+            // 'cuplikan_berita' => $request->cuplikan_berita,
+            'cuplikan_berita' => $filename,
             'media_publikasi'=> $request->media_publikasi,
             'jenis_berita' => $request->jenis_berita,
             'ringkasan_berita' => $request ->ringkasan_berita,    

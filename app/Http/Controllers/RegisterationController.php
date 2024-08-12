@@ -8,6 +8,14 @@ use Illuminate\Support\Facades\Hash;
 
 class RegisterationController extends Controller
 {
+
+     //start fungsi untuk memberikan akses lihat kepada user yang belum login dihalaman login (cara 1)
+    //  public function __construct(){
+    //     $this->middleware('guest');
+    // }
+    //end fungsi untuk memberikan akses lihat kepada user yang belum login dihalaman login
+
+
     public function create(){
         return view('auth.register'); //kalau kita pake name, ga perlu lagi pake /
     }
