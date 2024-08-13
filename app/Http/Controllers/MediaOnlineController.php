@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\MediaOnline;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
@@ -73,9 +74,38 @@ class MediaOnlineController extends Controller
     }
 
     public function update(Request $request, $id){
+        $request->validate([
+            // 'cuplikan_berita' => 'required|string',
+            'cuplikan_berita' => 'required|mimes:jpeg,png,jpg,svg|max:2048',
+            'media_publikasi' => 'required|string',//|unique:media_onlines'
+            'jenis_berita' => 'required|in:positif,negatif,netral,rilis',
+            'ringkasan_berita' => 'required|string',
+            'saran_tindak_lanjut' => 'required|string',
+            'waktu_tinjau' => 'required|date',
+        ]);
+        // start untuk hapus data dari storage kalau dia diupdate
+        $find = MediaOnline::find($id);
+        //end untuk hapus data dari storage kalau dia diupdate
+
+        //start untuk upload gambar
+        $cuplikan_berita = $request->file('cuplikan_berita');
+
+        if($cuplikan_berita){
+        $filename = date('d-m-Y').$cuplikan_berita->getClientOriginalName();
+        $path = 'media-online/'.$filename;
+        //hapus dari storage
+        if($find->cuplikan_berita){
+            Storage::disk('public')->delete('media-online/'.$find->cuplikan_berita);
+        }
+        //simpan ke storage untuk file yang baru
+        Storage::disk('public')->put($path, file_get_contents($cuplikan_berita));
+        $cuplikan_berita =$filename;
+        }        
+        //end untuk upload gambar
+
         DB::table('media_onlines')->where('id', $id)->update([
             'user_id' => 1, //ini harus diganti ketika login sudah dikerjakan
-            'cuplikan_berita' => $request->cuplikan_berita,
+            'cuplikan_berita' => $cuplikan_berita,
             'media_publikasi'=> $request->media_publikasi,
             'jenis_berita' => $request->jenis_berita,
             'ringkasan_berita' => $request ->ringkasan_berita,    
@@ -90,7 +120,10 @@ class MediaOnlineController extends Controller
     public function destroy($id){
         // $media_onlines = DB::table('media_onlines')->where('id', $id)->first();
         // $media_onlines->delete();
-
+        //hapus data dari storage
+        $find = MediaOnline::find($id);
+        Storage::disk('public')->delete('media-online/'.$find->cuplikan_berita);
+        //end hapus data dari storage
         DB::table('media_onlines')->where('id', $id)->delete();
         return redirect('/media-online');
     }

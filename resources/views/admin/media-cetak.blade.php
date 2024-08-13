@@ -51,7 +51,8 @@
                                 
                             <tr>
                                 <td>
-                                    <img src="{{asset('img/logo-diskominfo-sumut.jpg')}}" alt="" style="align:center; width: 65px; margin-top: 5px;margin-buttom: 5px;">
+                                    {{-- <img src="{{asset('img/logo-diskominfo-sumut.jpg')}}" alt="" style="align:center; width: 65px; margin-top: 5px;margin-buttom: 5px;"> --}}
+                                    <img src="{{ asset('storage/media-cetak/'.$med_cetak->cuplikan_berita) }}" alt="{{  $med_cetak->cuplikan_berita }}"  style="align:center; width: 400px; margin-top: 5px;margin-buttom: 5px;">
                                 </td>
                                 <td>{{$med_cetak->media_publikasi}}</td>
                                 <td>{{$med_cetak->waktu_tinjau}}</td>

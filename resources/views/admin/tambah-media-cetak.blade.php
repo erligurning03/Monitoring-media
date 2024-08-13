@@ -53,7 +53,7 @@
         <button type="submit" class="btn btn-primary">Submit</button>
     </form> --}}
 
-    <form action="/media-cetak" method="POST">
+    <form action="/media-cetak" method="POST" enctype="multipart/form-data">
         @csrf
         {{-- @foreach($errors->all() as $error)
             {{ $error }}

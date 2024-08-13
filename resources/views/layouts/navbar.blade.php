@@ -1,6 +1,6 @@
                 <!-- Topbar -->
                 <nav class="navbar navbar-expand navbar-light bg-white topbar static-top shadow rounded" style="position: fixed;  transition: background-color 0.3s ease; z-index: 1000; width:100%; padding:1cm; justify-content: space-between;padding: 1rem 2rem;">
-                    {{-- nav class="navbar navbar-expand navbar-light bg-white topbar static-top shadow"--}}
+                {{-- <nav class="navbar navbar-expand navbar-light bg-white topbar static-top shadow"> --}}
                     <!-- Sidebar Toggle (Topbar) -->
                     <form class="form-inline">
                         <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
